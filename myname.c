@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 main() {
-printf("½²©Ó­×\n");
+printf("è”¡æ‰¿ä¿®\n");
 }
 
