@@ -49,19 +49,19 @@ class Tetris(object):
         # List of used blocks
         self.blk_list    = []
         # Compute start indexes for tetris blocks
-        self.start_x = math.ceil(self.resx-constants.BOARD_HEIGHT-60)
+        self.start_x = math.ceil(self.resx-constants.BOARD_HEIGHT-80)
         self.start_y = constants.BOARD_UP_MARGIN + constants.BOARD_HEIGHT + constants.BOARD_MARGIN
         # Blocka data (shapes and colors). The shape is encoded in the list of [X,Y] points. Each point
         # represents the relative position. The true/false value is used for the configuration of rotation where
         # False means no rotate and True allows the rotation.
         self.block_data = (
             ([[0,0],[1,0],[2,0],[3,0]],constants.RED,True),     # I block 
-            ([[0,0],[1,0],[0,1],[-1,1]],constants.GREEN,True),  # S block 
-            ([[0,0],[1,0],[2,0],[2,1]],constants.BLUE,True),    # J block
-            ([[0,0],[0,1],[1,0],[1,1]],constants.ORANGE,False), # O block
-            ([[-1,0],[0,0],[0,1],[1,1]],constants.GOLD,True),   # Z block
-            ([[0,0],[1,0],[2,0],[1,1]],constants.PURPLE,True),  # T block
-            ([[0,0],[1,0],[2,0],[0,1]],constants.CYAN,True),    # J block
+            ([[2,0],[3,0],[2,1],[1,1]],constants.GREEN,True),  # S block 
+            ([[1,0],[2,0],[3,0],[3,1]],constants.BLUE,True),    # J block
+            ([[2,0],[2,1],[3,0],[3,1]],constants.ORANGE,False), # O block
+            ([[1,0],[2,0],[2,1],[3,1]],constants.GOLD,True),   # Z block
+            ([[1,0],[2,0],[3,0],[2,1]],constants.PURPLE,True),  # T block
+            ([[1,0],[2,0],[3,0],[1,1]],constants.CYAN,True),    # J block
         )
         # Compute the number of blocks. When the number of blocks is even, we can use it directly but 
         # we have to decrese the number of blocks in line by one when the number is odd (because of the used margin).
