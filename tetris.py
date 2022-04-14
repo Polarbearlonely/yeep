@@ -49,7 +49,7 @@ class Tetris(object):
         # List of used blocks
         self.blk_list    = []
         # Compute start indexes for tetris blocks
-        self.start_x = math.ceil(self.resx/2.0)
+        self.start_x = math.ceil(self.resx-constants.BOARD_HEIGHT-60)
         self.start_y = constants.BOARD_UP_MARGIN + constants.BOARD_HEIGHT + constants.BOARD_MARGIN
         # Blocka data (shapes and colors). The shape is encoded in the list of [X,Y] points. Each point
         # represents the relative position. The true/false value is used for the configuration of rotation where
@@ -343,4 +343,5 @@ class Tetris(object):
 if __name__ == "__main__":
     Tetris(24,45).run()
 
+#Special add to try pull requests
 #Special add to try pull requests
